@@ -6,7 +6,7 @@ class App extends Component {
     super(props);
   }
 
-  state = {
+  useState = {
     id: "",
     para: ""
   };
@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div id="main">
         <button onClick={this.handleClick}>Click</button>
-        <p id={this.state.id}>{this.state.para}</p>
+        <p id={this.useState.id}>{this.useState.para}</p>
       </div>
     );
   }
