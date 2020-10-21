@@ -7,15 +7,12 @@ class App extends Component {
   }
 
   state = {
-    id: "",
-    para: ""
+    check: false
   };
 
   handleClick = () => {
     this.setState({
-      id: "para",
-      para:
-        "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
+      check: true
     });
   };
 
@@ -23,7 +20,12 @@ class App extends Component {
     return (
       <div id="main">
         <button onClick={this.handleClick}>Click</button>
-        <p id={this.state.id}>{this.state.para}</p>
+        {this.state.check && (
+          <p id="para">
+            "Hello, I've learnt to use the full-stack evaluation tool. This
+            makes me so happy"
+          </p>
+        )}
       </div>
     );
   }
