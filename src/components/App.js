@@ -4,8 +4,9 @@ import "../styles/App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { check: false };
   }
+
+  state = { check: false };
 
   handleClick = () => {
     this.setState({ check: true });
