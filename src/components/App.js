@@ -7,7 +7,7 @@ class App extends Component {
   }
 
   state = {
-    id: "click",
+    id: "",
     para: ""
   };
 
@@ -22,9 +22,8 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <button onClick={this.handleClick} id={this.state.id}>
-          {this.state.para}
-        </button>
+        <button onClick={this.handleClick} />
+        <p id={this.state.id}>{this.state.para}</p>
       </div>
     );
   }
