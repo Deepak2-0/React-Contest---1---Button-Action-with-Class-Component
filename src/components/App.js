@@ -15,7 +15,9 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <button onClick={this.handleClick}>Click</button>
+        <button id="click" onClick={this.handleClick}>
+          Click
+        </button>
         {this.state.display && (
           <p id="para">
             Hello, I've learnt to use the full-stack evaluation tool. This makes
