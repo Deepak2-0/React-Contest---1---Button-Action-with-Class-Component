@@ -2,19 +2,20 @@ import React, { Component, useState } from "react";
 import "../styles/App.css";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { display: false };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = () => {
+  handleClick() {
     this.setState({ display: true });
-  };
+  }
 
   render() {
     return (
       <div id="main">
-        <button onClick={this.handleClick} />
+        <button onClick={this.handleClick}>Click</button>
         {this.state.display && (
           <p id="para">
             Hello, I've learnt to use the full-stack evaluation tool. This makes
